@@ -150,6 +150,7 @@ table {
 @-ms-viewport {
   width: device-width;
 }
+/* Begin Standard CSS */
 .phone {
   padding: 100px 0;
   width: 368px;
@@ -164,8 +165,45 @@ table {
   height: 568px;
   background: #ccc;
   margin: auto;
+  overflow: scroll;
+  position: relative;
+}
+@media all and (min-width: 700px) {
+  .container {
+    padding: 60px 0 45px 0;
+  }
 }
 .top-bar {
   background: white;
   height: 60px;
+  position: fixed;
+  width: 320px;
+  top: 140px;
+}
+.top-bar h1 {
+  color: #00adef;
+  text-align: center;
+  display: inline-block;
+  margin: auto;
+}
+.top-bar h1 span {
+  color: #00bab4;
+}
+.top-bar img {
+  width: 100%;
+}
+.top-bar .section {
+  width: 33%;
+  float: left;
+}
+.bottom-bar {
+  height: 45px;
+  background: #00adef;
+  width: 320px;
+  position: fixed;
+  top: 663px;
+}
+.petition-frame {
+  background: #656565;
+  height: 182px;
 }
