@@ -24,43 +24,49 @@ html(lang="en")
 			try{Typekit.load();}catch(e){}
 		link(type="text/css" rel="stylesheet" href="css/style.css")
 	body
-		.phone
-			.container
-				.wrapper
-					.top-bar.group
-						img(src="img/status-bar.png")
-						.section(style="padding: 10px 0 0 10px;")
-							a(href="")
-								p Filter
-						.section(style="text-align: center; padding-top: 10px;")
-							h1.tk-adelle Be
-								span Cause
-						.section(style="text-align: right; padding: 10px 10px 0 0;")
-							a(href="")
-								i.fa.fa-search
-					.bottom-bar
-						div.group
-							.section
-								i.fa.fa-plus
-								h4 Submit
-							.section
-								i.fa.fa-newspaper-o
-								h4 Feed
-							.section
-								i.fa.fa-plus
-								h4 Causes
-							.section
-								i.fa.fa-plus
-								h4 Settings
-						div
-							.wayfinder
-					.petition-frame
-					.petition-frame(style="background: #999")
-					.petition-frame
-					.petition-frame(style="background: #999")
-					.petition-frame
-					.petition-frame(style="background: #999")
-					.petition-frame
-					.petition-frame(style="background: #999")
+		.container
+			.top-bar.group
+				img(src="img/status-bar.png")
+				.section(style="padding: 10px 0 0 10px;")
+					a.filter-button(href="")
+						p Filter
+				.section(style="text-align: center; padding-top: 10px;")
+					h1.tk-adelle Be
+						span Cause
+				.section(style="text-align: right; padding: 10px 10px 0 0;")
+					a(href="")
+						i.fa.fa-search
+			.bottom-bar
+				div.group
+					.section(data-left="0%")
+						i.fa.fa-plus
+						h4 Submit
+					.section(data-left="25%")
+						i.fa.fa-newspaper-o
+						h4 Feed
+					.section(data-left="50%")
+						i.fa.fa-plus
+						h4 Causes
+					.section(data-left="75%")
+						i.fa.fa-plus
+						h4 Settings
+				div
+					.wayfinder
+			.main-feed
+				.petition-frame(style="background-image: url('img/recycling.png');")
+					.shade.light
+					.shade.dark
+					.content.green
+						h2 Support more recycling options for Provo residents
+				.petition-frame(style="background: #999")
+				.petition-frame
+				.petition-frame(style="background: #999")
+				.petition-frame
+				.petition-frame(style="background: #999")
+				.petition-frame
+				.petition-frame(style="background: #999")
+			#filter
+			.petition
+				h1 Hello World!
 		script(src="js/jquery-2.1.1.min.js")
 		script(src="js/script.js")

@@ -159,37 +159,39 @@ a {
   color: inherit;
 }
 .phone {
-  padding: 100px 0;
-  width: 368px;
+  padding: 118px 0;
+  width: 382px;
   margin: 40px auto;
   border-radius: 15px;
   background-image: url('../img/iphone.jpg');
   background-size: contain;
   background-repeat: no-repeat;
 }
-.container {
-  width: 320px;
+iframe {
   height: 568px;
+  width: 320px;
+  display: block;
+  margin: auto;
+}
+.container {
   background: #ccc;
   margin: auto;
   overflow: scroll;
   position: relative;
-}
-@media all and (min-width: 700px) {
-  .container {
-    padding: 60px 0 45px 0;
-  }
+  max-width: 400px;
+  padding: 60px 0 45px;
 }
 .top-bar {
   background: white;
   height: 60px;
   position: fixed;
-  width: 320px;
-  top: 140px;
+  top: 0;
+  max-width: 400px;
   color: #656565;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 .top-bar h1 {
   color: #00adef;
@@ -210,12 +212,21 @@ a {
 .bottom-bar {
   height: 45px;
   background: #656565;
-  width: 320px;
+  width: 100%;
+  max-width: 400px;
   position: fixed;
-  top: 663px;
+  bottom: 0;
   -webkit-box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: bottom 0.5s;
+  -moz-transition: bottom 0.5s;
+  -ms-transition: bottom 0.5s;
+  -o-transition: bottom 0.5s;
+  z-index: 5;
+}
+.bottom-bar.hide {
+  bottom: -45px;
 }
 .bottom-bar .section {
   height: 42px;
@@ -235,10 +246,10 @@ a {
   margin: 7px 0 2px;
 }
 .bottom-bar .wayfinder {
-  -webkit-transition: left 0.2s;
-  -moz-transition: left 0.2s;
-  -ms-transition: left 0.2s;
-  -o-transition: left 0.2s;
+  -webkit-transition: left 0.3s;
+  -moz-transition: left 0.3s;
+  -ms-transition: left 0.3s;
+  -o-transition: left 0.3s;
   position: relative;
   left: 25%;
   height: 3px;
@@ -247,5 +258,64 @@ a {
 }
 .petition-frame {
   background: #656565;
+  background-size: cover;
+  background-position: center center;
   height: 182px;
+  position: relative;
+}
+.petition-frame .shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.petition-frame .shade.dark {
+  background: rgba(0, 0, 0, 0.5);
+}
+.petition-frame .shade.light {
+  background: rgba(255, 255, 255, 0.25);
+}
+.petition-frame h2 {
+  color: #fff;
+  font-family: "Adelle", serif;
+  font-size: 24px;
+  line-height: 30px;
+}
+.petition-frame .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+}
+.petition-frame .content.green {
+  border-left: 5px solid #00bab4;
+}
+.petition,
+.main-feed {
+  position: relative;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.slide-left {
+  left: 0;
+}
+#filter {
+  position: absolute;
+  top: 60px;
+  left: -50%;
+  width: 50%;
+  height: 600px;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-transition: left 0.3s;
+  -moz-transition: left 0.3s;
+  -ms-transition: left 0.3s;
+  -o-transition: left 0.3s;
+}
+#filter.show {
+  left: 0;
 }

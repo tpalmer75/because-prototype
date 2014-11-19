@@ -24,45 +24,53 @@
     <link type="text/css" rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="phone">
-      <div class="container">
-        <div class="wrapper">
-          <div class="top-bar group"><img src="img/status-bar.png">
-            <div style="padding: 10px 0 0 10px;" class="section"><a href="">
-                <p>Filter</p></a></div>
-            <div style="text-align: center; padding-top: 10px;" class="section">
-              <h1 class="tk-adelle">Be<span>Cause</span></h1>
-            </div>
-            <div style="text-align: right; padding: 10px 10px 0 0;" class="section"><a href=""><i class="fa fa-search"></i></a></div>
-          </div>
-          <div class="bottom-bar">
-            <div class="group">
-              <div class="section"><i class="fa fa-plus"></i>
-                <h4>Submit</h4>
-              </div>
-              <div class="section"><i class="fa fa-newspaper-o"></i>
-                <h4>Feed</h4>
-              </div>
-              <div class="section"><i class="fa fa-plus"></i>
-                <h4>Causes</h4>
-              </div>
-              <div class="section"><i class="fa fa-plus"></i>
-                <h4>Settings</h4>
-              </div>
-            </div>
-            <div>
-              <div class="wayfinder"></div>
-            </div>
-          </div>
-          <div class="petition-frame"></div>
-          <div style="background: #999" class="petition-frame"></div>
-          <div class="petition-frame"></div>
-          <div style="background: #999" class="petition-frame"></div>
-          <div class="petition-frame"></div>
-          <div style="background: #999" class="petition-frame"></div>
-          <div class="petition-frame"></div>
-          <div style="background: #999" class="petition-frame"></div>
+    <div class="container">
+      <div class="top-bar group"><img src="img/status-bar.png">
+        <div style="padding: 10px 0 0 10px;" class="section"><a href="" class="filter-button">
+            <p>Filter</p></a></div>
+        <div style="text-align: center; padding-top: 10px;" class="section">
+          <h1 class="tk-adelle">Be<span>Cause</span></h1>
         </div>
+        <div style="text-align: right; padding: 10px 10px 0 0;" class="section"><a href=""><i class="fa fa-search"></i></a></div>
+      </div>
+      <div class="bottom-bar">
+        <div class="group">
+          <div data-left="0%" class="section"><i class="fa fa-plus"></i>
+            <h4>Submit</h4>
+          </div>
+          <div data-left="25%" class="section"><i class="fa fa-newspaper-o"></i>
+            <h4>Feed</h4>
+          </div>
+          <div data-left="50%" class="section"><i class="fa fa-plus"></i>
+            <h4>Causes</h4>
+          </div>
+          <div data-left="75%" class="section"><i class="fa fa-plus"></i>
+            <h4>Settings</h4>
+          </div>
+        </div>
+        <div>
+          <div class="wayfinder"></div>
+        </div>
+      </div>
+      <div class="main-feed">
+        <div style="background-image: url('img/recycling.png');" class="petition-frame">
+          <div class="shade light"></div>
+          <div class="shade dark"></div>
+          <div class="content green">
+            <h2>Support more recycling options for Provo residents</h2>
+          </div>
+        </div>
+        <div style="background: #999" class="petition-frame"></div>
+        <div class="petition-frame"></div>
+        <div style="background: #999" class="petition-frame"></div>
+        <div class="petition-frame"></div>
+        <div style="background: #999" class="petition-frame"></div>
+        <div class="petition-frame"></div>
+        <div style="background: #999" class="petition-frame"></div>
+      </div>
+      <div id="filter"></div>
+      <div class="petition">
+        <h1>Hello World!</h1>
       </div>
     </div>
     <script src="js/jquery-2.1.1.min.js"></script>

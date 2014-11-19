@@ -13,9 +13,10 @@ a {
 	color: inherit;
 }
 
+// Desktop View --------------------
 .phone {
-	padding: 100px 0;
-	width: 368px;
+	padding: 118px 0;
+	width: 382px;
 	margin: 40px auto;
 	border-radius: 15px;
 	background-image: url('../img/iphone.jpg');
@@ -23,26 +24,33 @@ a {
 	background-repeat: no-repeat;
 }
 
-.container {
-	width: 320px;
+iframe {
 	height: 568px;
+	width: 320px;
+	display: block;
+	margin: auto;
+}
+
+// Standard CSS ------
+
+.container {
 	background: #ccc;
 	margin: auto;
 	overflow: scroll;
 	position: relative;
-	@media all and (min-width: 700px) {
-		padding: 60px 0 45px 0;
-	}
+	max-width:400px;
+	padding: 60px 0 45px;
 }
 
 .top-bar {
 	background: white;
 	height: 60px;
 	position: fixed;
-	width: 320px;
-	top: 140px;
+	top: 0;
+	max-width: 400px;
 	color: @dark-grey;
 	.box-shadow(0 5px 10px rgba(0,0,0,.1));
+	z-index: 10;
 	h1 {
 		color: @blue;
 		text-align: center;
@@ -64,10 +72,16 @@ a {
 .bottom-bar {
 	height: 45px;
 	background: @dark-grey;
-	width: 320px;
+	width: 100%;
+	max-width: 400px;
 	position: fixed;
-	top: 663px;
+	bottom: 0;
 	.box-shadow(0 -5px 10px rgba(0,0,0,.1));
+	.transition(bottom .5s);
+	z-index: 5;
+	&.hide {
+		bottom: -45px;
+	}
 	.section {
 		height: 42px;
 		width: 25%;
@@ -86,7 +100,7 @@ a {
 		margin: 7px 0 2px;
 	}
 	.wayfinder {
-		.transition(left .2s);
+		.transition(left .3s);
 		position: relative;
 		left: 25%;
 		height: 3px;
@@ -97,5 +111,62 @@ a {
 
 .petition-frame {
 	background: @dark-grey;
+	background-size: cover;
+	background-position: center center;
 	height: 182px;
+	position: relative;
+	.shade {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		&.dark {
+			background: rgba(0,0,0,.5);
+		} &.light {
+			background: rgba(255,255,255,.25);
+		}
+	}
+	h2 {
+		color: #fff;
+		font-family: @serif;
+		font-size: 24px;
+		line-height: 30px;
+	}
+	.content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 24px;
+		&.green {
+			border-left: 5px solid @green;
+		}
+	}
+
+}
+
+// Transition CSS ----------------
+
+.petition, .main-feed {
+	position: relative;
+	.transition(all .5s);
+}
+
+.slide-left {
+	left: 0;
+}
+
+#filter {
+	position: absolute;
+	top: 60px;
+	left: -50%;
+	width: 50%;
+	height: 600px;
+	background: rgba(255,255,255,.8);
+	.transition(left .3s);
+	&.show {
+		left: 0;
+	}
 }

@@ -1,0 +1,23 @@
+doctype html
+<!--[if lt IE 9]>
+html.ie
+p.browsehappy(style="padding: 20px")
+	| You are using an <strong>outdated</strong> browser.
+	| Please <a href="http://browsehappy.com/">upgrade your browser</a>
+	| to improve your experience.
+script.
+	document.createElement('header');
+	document.createElement('nav');
+	document.createElement('section');
+	document.createElement('article');
+	document.createElement('aside');
+	document.createElement('footer');
+<![endif]-->
+html(lang="en")
+	head
+		title BeCause iOS Prototype
+		meta(chartset="UTF 8")
+		link(type="text/css" rel="stylesheet" href="css/style.css")
+	body
+		.phone
+			iframe(src="index.html")
