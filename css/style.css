@@ -151,6 +151,13 @@ table {
   width: device-width;
 }
 /* Begin Standard CSS */
+body {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
 .phone {
   padding: 100px 0;
   width: 368px;
@@ -179,6 +186,10 @@ table {
   position: fixed;
   width: 320px;
   top: 140px;
+  color: #656565;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 .top-bar h1 {
   color: #00adef;
@@ -198,10 +209,41 @@ table {
 }
 .bottom-bar {
   height: 45px;
-  background: #00adef;
+  background: #656565;
   width: 320px;
   position: fixed;
   top: 663px;
+  -webkit-box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+}
+.bottom-bar .section {
+  height: 42px;
+  width: 25%;
+  display: inline-block;
+  float: left;
+  text-align: center;
+}
+.bottom-bar h4 {
+  font-size: 10px;
+  color: #999999;
+}
+.bottom-bar i {
+  display: inline-block;
+  font-size: 18px;
+  color: #cccccc;
+  margin: 7px 0 2px;
+}
+.bottom-bar .wayfinder {
+  -webkit-transition: left 0.2s;
+  -moz-transition: left 0.2s;
+  -ms-transition: left 0.2s;
+  -o-transition: left 0.2s;
+  position: relative;
+  left: 25%;
+  height: 3px;
+  width: 25%;
+  background: #999999;
 }
 .petition-frame {
   background: #656565;

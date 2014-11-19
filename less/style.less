@@ -4,6 +4,15 @@
 
 /* Begin Standard CSS */
 
+body {
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
 .phone {
 	padding: 100px 0;
 	width: 368px;
@@ -32,6 +41,8 @@
 	position: fixed;
 	width: 320px;
 	top: 140px;
+	color: @dark-grey;
+	.box-shadow(0 5px 10px rgba(0,0,0,.1));
 	h1 {
 		color: @blue;
 		text-align: center;
@@ -52,10 +63,36 @@
 
 .bottom-bar {
 	height: 45px;
-	background: @blue;
+	background: @dark-grey;
 	width: 320px;
 	position: fixed;
 	top: 663px;
+	.box-shadow(0 -5px 10px rgba(0,0,0,.1));
+	.section {
+		height: 42px;
+		width: 25%;
+		display: inline-block;
+		float: left;
+		text-align: center;
+	}
+	h4 {
+		font-size: 10px;
+		color: @grey;
+	}
+	i {
+		display: inline-block;
+		font-size: 18px;
+		color: @light-grey;
+		margin: 7px 0 2px;
+	}
+	.wayfinder {
+		.transition(left .2s);
+		position: relative;
+		left: 25%;
+		height: 3px;
+		width: 25%;
+		background: @grey;
+	}
 }
 
 .petition-frame {

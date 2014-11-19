@@ -18,6 +18,7 @@ html(lang="en")
 		title BeCause iOS Prototype
 		meta(chartset="UTF 8")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet")
 		script(src="//use.typekit.net/fov7hkp.js")
 		script.
 			try{Typekit.load();}catch(e){}
@@ -25,24 +26,41 @@ html(lang="en")
 	body
 		.phone
 			.container
-				.top-bar.group
-					img(src="img/status-bar.png")
-					.section
-						p test
-					.section(style="text-align: center; padding-top: 10px;")
-						h1.tk-adelle Be
-							span Cause
-					.section
-						p test
-				.bottom-bar
-					p test
-				.petition-frame
-				.petition-frame(style="background: #999")
-				.petition-frame
-				.petition-frame(style="background: #999")
-				.petition-frame
-				.petition-frame(style="background: #999")
-				.petition-frame
-				.petition-frame(style="background: #999")
+				.wrapper
+					.top-bar.group
+						img(src="img/status-bar.png")
+						.section(style="padding: 10px 0 0 10px;")
+							a(href="")
+								p Filter
+						.section(style="text-align: center; padding-top: 10px;")
+							h1.tk-adelle Be
+								span Cause
+						.section(style="text-align: right; padding: 10px 10px 0 0;")
+							a(href="")
+								i.fa.fa-search
+					.bottom-bar
+						div.group
+							.section
+								i.fa.fa-plus
+								h4 Submit
+							.section
+								i.fa.fa-newspaper-o
+								h4 Feed
+							.section
+								i.fa.fa-plus
+								h4 Causes
+							.section
+								i.fa.fa-plus
+								h4 Settings
+						div
+							.wayfinder
+					.petition-frame
+					.petition-frame(style="background: #999")
+					.petition-frame
+					.petition-frame(style="background: #999")
+					.petition-frame
+					.petition-frame(style="background: #999")
+					.petition-frame
+					.petition-frame(style="background: #999")
 		script(src="js/jquery-2.1.1.min.js")
 		script(src="js/script.js")
