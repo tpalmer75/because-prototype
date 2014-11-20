@@ -18,7 +18,7 @@ html(lang="en")
 		title BeCause iOS Prototype
 		meta(chartset="UTF 8")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
-		link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet")
+		link(href="css/icons.css" rel="stylesheet")
 		script(src="//use.typekit.net/fov7hkp.js")
 		script.
 			try{Typekit.load();}catch(e){}
@@ -35,20 +35,20 @@ html(lang="en")
 						span Cause
 				.section(style="text-align: right; padding: 10px 10px 0 0;")
 					a(href="")
-						i.fa.fa-search
+						i.icon.icon-search
 			.bottom-bar
 				div.group
 					.section(data-left="0%")
-						i.fa.fa-plus
+						i.icon.icon-plus
 						h4 Submit
 					.section(data-left="25%")
-						i.fa.fa-newspaper-o
+						i.icon.icon-newspaper
 						h4 Feed
 					.section(data-left="50%")
-						i.fa.fa-plus
+						i.icon.icon-feather
 						h4 Causes
 					.section(data-left="75%")
-						i.fa.fa-plus
+						i.icon.icon-cog
 						h4 Settings
 				div
 					.wayfinder
@@ -58,7 +58,34 @@ html(lang="en")
 					.shade.dark
 					.content.green
 						h2 Support more recycling options for Provo residents
-				.petition-frame(style="background: #999")
+						.time
+							i.icon.icon-clock
+							h4 2 days remaining
+						.signatures
+							i.icon.icon-feather
+							h4 650
+				.petition-frame
+					.shade.light
+					.shade.dark
+					.content.blue
+						h2 More technical training classes for design students on campus
+						.time
+							i.icon.icon-clock
+							h4 3 weeks remaining
+						.signatures
+							i.icon.icon-feather
+							h4 310
+				.petition-frame(style="background-image: url('img/camera.png');")
+					.shade.light
+					.shade.dark
+					.content.purple
+						h2 Should the Visual Arts Deparment split?
+						.time
+							i.icon.icon-clock
+							h4 1 month remaining
+						.signatures
+							i.icon.icon-feather
+							h4 650
 				.petition-frame
 				.petition-frame(style="background: #999")
 				.petition-frame
