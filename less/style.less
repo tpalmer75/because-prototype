@@ -40,7 +40,7 @@ iframe {
 	position: relative;
 	max-width:400px;
 	width: 100%;
-	padding: 60px 0 45px;
+	padding-top: 60px;
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
@@ -180,6 +180,8 @@ iframe {
 		&.orange {
 			border-left: 5px solid @orange;
 		}
+		&.dark-blue {
+			border-left: 5px solid @dark-blue;		}
 	}
 	.time {
 		color: rgba(221,221,221,.75);
@@ -267,6 +269,18 @@ iframe {
 			position: relative;
 			bottom: -2px;
 		}
+		&.green {
+			background: @green;
+			border: 1px solid @green;
+		}
+		&.orange {
+			background: @orange;
+			border: 1px solid @orange;
+		}
+		&.dark-blue {
+			background: @dark-blue;
+			border: 1px solid @dark-blue;
+		}
 		&.signed {
 			border: 1px solid @red;
 			background: transparent;
@@ -303,6 +317,9 @@ iframe {
 		.text {
 			display: table-cell;
 			padding-left: 12px;
+			p {
+				margin-top: 4px;
+			}
 		}
 	}
 }

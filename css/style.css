@@ -179,7 +179,7 @@ iframe {
   position: relative;
   max-width: 400px;
   width: 100%;
-  padding: 60px 0 45px;
+  padding-top: 60px;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -337,6 +337,9 @@ iframe {
 .cause-frame .content.orange {
   border-left: 5px solid #f49c66;
 }
+.cause-frame .content.dark-blue {
+  border-left: 5px solid #207bb1;
+}
 .cause-frame .time {
   color: rgba(221, 221, 221, 0.75);
   font-weight: bold;
@@ -431,6 +434,18 @@ iframe {
   position: relative;
   bottom: -2px;
 }
+.cause-summary .cause-button.green {
+  background: #00bab4;
+  border: 1px solid #00bab4;
+}
+.cause-summary .cause-button.orange {
+  background: #f49c66;
+  border: 1px solid #f49c66;
+}
+.cause-summary .cause-button.dark-blue {
+  background: #207bb1;
+  border: 1px solid #207bb1;
+}
 .cause-summary .cause-button.signed {
   border: 1px solid #f26c5e;
   background: transparent;
@@ -467,6 +482,9 @@ iframe {
 .cause-summary .update .text {
   display: table-cell;
   padding-left: 12px;
+}
+.cause-summary .update .text p {
+  margin-top: 4px;
 }
 .cause,
 .main-feed {
