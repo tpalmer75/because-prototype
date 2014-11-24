@@ -40,10 +40,59 @@ $(document).ready(function() {
 	var bottomTrigger = $('.bottom-bar .section')
 
 	bottomTrigger.click(function() {
-		var placement = $(this).data('left');
+		// Set the data value as a variable
+		var placement = $(this).data('left')+'%';
 		var wayfinder = $('.wayfinder');
-
+		// Slide the wayfinder
 		wayfinder.css('left', placement);
+
+		// Multiply the data value by four (mainframe is 400% wide)
+		var screenSlide ='-' + $(this).data('left') * 4 + '%';
+		var mainFrame = $('.mainframe');
+		// Slide the mainframe
+		mainFrame.css('left', screenSlide);
+
+		filterContainer.removeClass('show');
+
+	});
+
+	// Function to remove all top bar controls
+	var clearTopBar = function(){$('.top-controls').removeClass('show');};
+
+	// ========================================
+	// Single cause view
+	// ========================================
+
+	var cause = $('.cause-trigger');
+
+	cause.click(function() {
+		if ($(this).next('.cause-summary').is(':hidden')) {
+			// Hide all other causes
+			$(this).siblings().not(this).slideUp(200);
+			// Scroll up to top to maintain view
+			$('body,html').animate({
+	            scrollTop: 0
+	        }, 200);
+			// Show the cause information
+	        $(this).next('.cause-summary').slideDown(200);
+	        // Remove all controls from top bar
+	        clearTopBar();
+	        // Add single view control in top bar
+	        $('.top-controls.top-singleview').addClass('show');
+	    }
+	});
+
+	var backFromCause = $('.top-singleview .back-button');
+	var openSummary = $('.cause-summary');
+
+	backFromCause.click(function() {
+		openSummary.slideUp(200);
+		// Remove all controls from top bar
+		clearTopBar();
+		// Put the main feed controls back
+		$('.top-controls.top-mainfeed').addClass('show');
+
+		$('.cause-frame').slideDown(200);
 	});
 
 });

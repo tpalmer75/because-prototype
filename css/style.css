@@ -159,11 +159,10 @@ a {
   color: inherit;
 }
 .phone {
-  padding: 118px 0;
-  width: 382px;
+  padding: 119px 0;
+  width: 386px;
   margin: 40px auto;
-  border-radius: 15px;
-  background-image: url('../img/iphone.jpg');
+  background-image: url('../img/iphone.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -172,14 +171,49 @@ iframe {
   width: 320px;
   display: block;
   margin: auto;
+  border-radius: 4px;
 }
 .container {
-  background: #ccc;
+  background: #eee;
   margin: auto;
-  overflow: scroll;
   position: relative;
   max-width: 400px;
+  width: 100%;
   padding: 60px 0 45px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.mainframe {
+  background: #eee;
+  width: 400%;
+  position: relative;
+  left: -100%;
+  -webkit-transition: left 0.3s;
+  -moz-transition: left 0.3s;
+  -ms-transition: left 0.3s;
+  -o-transition: left 0.3s;
+}
+.mainframe .col {
+  width: 25%;
+  float: left;
+}
+.top-controls {
+  position: absolute;
+  top: -40px;
+  opacity: 0;
+  width: 100%;
+  -webkit-transition: top 0.5s;
+  -moz-transition: top 0.5s;
+  -ms-transition: top 0.5s;
+  -o-transition: top 0.5s;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+}
+.top-controls.show {
+  top: 24px;
+  opacity: 1;
 }
 .top-bar {
   background: white;
@@ -256,33 +290,34 @@ iframe {
   width: 25%;
   background: #999999;
 }
-.petition-frame {
+.cause-frame {
   background: #656565;
   background-size: cover;
   background-position: center center;
   height: 182px;
   position: relative;
+  cursor: pointer;
 }
-.petition-frame .shade {
+.cause-frame .shade {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.petition-frame .shade.dark {
+.cause-frame .shade.dark {
   background: rgba(0, 0, 0, 0.5);
 }
-.petition-frame .shade.light {
+.cause-frame .shade.light {
   background: rgba(255, 255, 255, 0.25);
 }
-.petition-frame h2 {
+.cause-frame h2 {
   color: #fff;
   font-family: "Adelle", serif;
   font-size: 24px;
   line-height: 30px;
 }
-.petition-frame .content {
+.cause-frame .content {
   position: absolute;
   top: 0;
   left: 0;
@@ -290,16 +325,19 @@ iframe {
   height: 100%;
   padding: 24px;
 }
-.petition-frame .content.green {
+.cause-frame .content.green {
   border-left: 5px solid #00bab4;
 }
-.petition-frame .content.blue {
+.cause-frame .content.blue {
   border-left: 5px solid #00adef;
 }
-.petition-frame .content.purple {
+.cause-frame .content.purple {
   border-left: 5px solid #a183c1;
 }
-.petition-frame .time {
+.cause-frame .content.orange {
+  border-left: 5px solid #f49c66;
+}
+.cause-frame .time {
   color: rgba(221, 221, 221, 0.75);
   font-weight: bold;
   text-transform: uppercase;
@@ -308,14 +346,14 @@ iframe {
   bottom: 29px;
   left: 24px;
 }
-.petition-frame .time .icon {
+.cause-frame .time .icon {
   vertical-align: middle;
 }
-.petition-frame .time h4 {
+.cause-frame .time h4 {
   display: inline-block;
   vertical-align: middle;
 }
-.petition-frame .signatures {
+.cause-frame .signatures {
   position: absolute;
   right: 24px;
   bottom: 24px;
@@ -324,14 +362,28 @@ iframe {
   padding: 2px 8px 4px;
   border-radius: 12px;
 }
-.petition-frame .signatures h4 {
+.cause-frame .signatures h4 {
   display: inline-block;
   vertical-align: middle;
 }
-.petition-frame .signatures .icon {
+.cause-frame .signatures .icon {
   vertical-align: middle;
 }
-.petition,
+.cause-summary {
+  display: none;
+  top: 180px;
+  z-index: 5;
+  background: #eee;
+  color: #656565;
+  padding: 12px;
+  line-height: 18px;
+  font-size: 14px;
+  -webkit-transition: left 0.2s;
+  -moz-transition: left 0.2s;
+  -ms-transition: left 0.2s;
+  -o-transition: left 0.2s;
+}
+.cause,
 .main-feed {
   position: relative;
   -webkit-transition: all 0.5s;

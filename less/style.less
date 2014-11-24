@@ -15,11 +15,10 @@ a {
 
 // Desktop View --------------------
 .phone {
-	padding: 118px 0;
-	width: 382px;
+	padding: 119px 0;
+	width: 386px;
 	margin: 40px auto;
-	border-radius: 15px;
-	background-image: url('../img/iphone.jpg');
+	background-image: url('../img/iphone.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -29,19 +28,47 @@ iframe {
 	width: 320px;
 	display: block;
 	margin: auto;
+	border-radius: 4px;
 }
+
 
 // Standard CSS ------
 
 .container {
-	background: #ccc;
+	background: #eee;
 	margin: auto;
-	overflow: scroll;
 	position: relative;
 	max-width:400px;
+	width: 100%;
 	padding: 60px 0 45px;
+	overflow-x: hidden;
+	overflow-y: scroll;
 }
 
+.mainframe {
+	background: #eee;
+	width: 400%;
+	position: relative;
+	left: -100%;
+	.transition(left .3s);
+	.col {
+		width: 25%;
+		float: left;
+	}
+}
+
+.top-controls {
+	position: absolute;
+	top: -40px;
+	opacity: 0;
+	width: 100%;
+	.transition(top .5s);
+	.transition(opacity .2s);
+	&.show {
+		top: 24px;
+		opacity: 1;
+	}
+}
 .top-bar {
 	background: white;
 	height: 60px;
@@ -109,12 +136,13 @@ iframe {
 	}
 }
 
-.petition-frame {
+.cause-frame {
 	background: @dark-grey;
 	background-size: cover;
 	background-position: center center;
 	height: 182px;
 	position: relative;
+	cursor: pointer;
 	.shade {
 		position: absolute;
 		top: 0;
@@ -149,6 +177,9 @@ iframe {
 		&.purple {
 			border-left: 5px solid @purple;
 		}
+		&.orange {
+			border-left: 5px solid @orange;
+		}
 	}
 	.time {
 		color: rgba(221,221,221,.75);
@@ -182,12 +213,23 @@ iframe {
 			vertical-align: middle;
 		}
 	}
+}
 
+.cause-summary {
+	display: none;
+	top: 180px;
+	z-index: 5;
+	background: #eee;
+	color: #656565;
+	padding: 12px;
+	line-height: 18px;
+	font-size: 14px;
+	.transition(left .2s);
 }
 
 // Transition CSS ----------------
 
-.petition, .main-feed {
+.cause, .main-feed {
 	position: relative;
 	.transition(all .5s);
 }
