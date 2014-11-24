@@ -63,7 +63,7 @@ iframe {
 	opacity: 0;
 	width: 100%;
 	.transition(top .5s);
-	.transition(opacity .2s);
+	.transition(opacity 1s);
 	&.show {
 		top: 24px;
 		opacity: 1;
@@ -219,12 +219,92 @@ iframe {
 	display: none;
 	top: 180px;
 	z-index: 5;
-	background: #eee;
+	background: #fff;
 	color: #656565;
 	padding: 12px;
 	line-height: 18px;
 	font-size: 14px;
 	.transition(left .2s);
+	header{ 
+		img {
+			border-radius: 9999px;
+			width: 36px;
+			height: 36px;
+			margin: 12px 12px 12px 0;
+			vertical-align: middle;
+		}
+		h4 {
+			display: inline-block;
+			font-size: 18px;
+			font-weight: 300;
+		}
+	}
+	.cause-button {
+		display: block;
+		background: @blue;
+		color: #fff;
+		border-radius: 4px;
+		height: 37px;
+		font-size: 16px;
+		text-align: center;
+		position: relative;
+		border: 1px solid @blue;
+		.transition(all .2s);
+		.button-text, .signed-text {
+			position: absolute;
+			top: 8px;
+			left: 0;
+			width: 100%;
+			.transition(all .2s);
+		}
+		.signed-text {
+			opacity: 0;
+			color: @red;
+		}
+		.icon {
+			display: inline-block;
+			margin-right: 10px;
+			position: relative;
+			bottom: -2px;
+		}
+		&.signed {
+			border: 1px solid @red;
+			background: transparent;
+			.signed-text {
+				opacity: 1;
+			}
+			.button-text {
+				opacity: 0;
+			}
+		}
+	}
+	.update {
+		display: table;
+		padding-top: 12px;
+		border-top: 1px solid #eee;
+		margin-top: 12px;
+		.date {
+			width: 40px;
+			display: table-cell;
+			text-align: center;
+			.number {
+				display: block;
+				font-size: 26px;
+				font-weight: 300;
+			}
+			.month {
+				text-transform: uppercase;
+				font-size: 10px;
+				font-weight: 600;
+				letter-spacing: 1.5px;
+				margin-bottom: 6px;
+			}
+		}
+		.text {
+			display: table-cell;
+			padding-left: 12px;
+		}
+	}
 }
 
 // Transition CSS ----------------

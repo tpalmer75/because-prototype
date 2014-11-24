@@ -95,4 +95,9 @@ $(document).ready(function() {
 		$('.cause-frame').slideDown(200);
 	});
 
+	$('.cause-button').click(function(e) {
+		$(this).toggleClass('signed');
+		e.preventDefault();
+	});
+
 });

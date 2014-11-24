@@ -206,10 +206,10 @@ iframe {
   -moz-transition: top 0.5s;
   -ms-transition: top 0.5s;
   -o-transition: top 0.5s;
-  -webkit-transition: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
-  -ms-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
 }
 .top-controls.show {
   top: 24px;
@@ -373,7 +373,7 @@ iframe {
   display: none;
   top: 180px;
   z-index: 5;
-  background: #eee;
+  background: #fff;
   color: #656565;
   padding: 12px;
   line-height: 18px;
@@ -382,6 +382,91 @@ iframe {
   -moz-transition: left 0.2s;
   -ms-transition: left 0.2s;
   -o-transition: left 0.2s;
+}
+.cause-summary header img {
+  border-radius: 9999px;
+  width: 36px;
+  height: 36px;
+  margin: 12px 12px 12px 0;
+  vertical-align: middle;
+}
+.cause-summary header h4 {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 300;
+}
+.cause-summary .cause-button {
+  display: block;
+  background: #00adef;
+  color: #fff;
+  border-radius: 4px;
+  height: 37px;
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+  border: 1px solid #00adef;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+.cause-summary .cause-button .button-text,
+.cause-summary .cause-button .signed-text {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 100%;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+.cause-summary .cause-button .signed-text {
+  opacity: 0;
+  color: #f26c5e;
+}
+.cause-summary .cause-button .icon {
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  bottom: -2px;
+}
+.cause-summary .cause-button.signed {
+  border: 1px solid #f26c5e;
+  background: transparent;
+}
+.cause-summary .cause-button.signed .signed-text {
+  opacity: 1;
+}
+.cause-summary .cause-button.signed .button-text {
+  opacity: 0;
+}
+.cause-summary .update {
+  display: table;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+  margin-top: 12px;
+}
+.cause-summary .update .date {
+  width: 40px;
+  display: table-cell;
+  text-align: center;
+}
+.cause-summary .update .date .number {
+  display: block;
+  font-size: 26px;
+  font-weight: 300;
+}
+.cause-summary .update .date .month {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  margin-bottom: 6px;
+}
+.cause-summary .update .text {
+  display: table-cell;
+  padding-left: 12px;
 }
 .cause,
 .main-feed {
