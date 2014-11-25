@@ -207,6 +207,10 @@ iframe {
 		border: 1px solid rgba(255,255,255,.5);
 		padding: 2px 8px 4px;
 		border-radius: 12px;
+		.transition(all .2s);
+		&.highlight {
+			background: rgba(255,255,255,.5);
+		}
 		h4 {
 			display: inline-block;
 			vertical-align: middle;
@@ -219,8 +223,8 @@ iframe {
 
 .cause-summary {
 	display: none;
-	top: 180px;
-	z-index: 5;
+	position: relative;
+	z-index: 2;
 	background: #fff;
 	color: #656565;
 	padding: 12px;
@@ -320,6 +324,24 @@ iframe {
 			p {
 				margin-top: 4px;
 			}
+		}
+	}
+	.signature-view {
+		background: #fff;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		height: 0;
+		opacity: 0;
+		width: 100%;
+		overflow: hidden;
+		padding: 0 12px;
+		.transition(all .2s);
+		&.show {
+			left: 0
+			overflow: scroll;
+			opacity: 1;
+			height: calc(~"100% - 60px");
 		}
 	}
 }

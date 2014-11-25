@@ -95,9 +95,32 @@ $(document).ready(function() {
 		$('.cause-frame').slideDown(200);
 	});
 
+	// Changed sign button colors on click, and +1
 	$('.cause-button').click(function(e) {
+
 		$(this).toggleClass('signed');
 		e.preventDefault();
+
+		var signatures = $(this).parents('.cause-summary').prev('.cause-frame').find('.signatures h4');
+		var signaturesButton = signatures.parents('.signatures');
+		var currentNumber = signatures.text();
+
+		if ($(this).hasClass('signed')) {
+			// Bump the number up
+			currentNumber ++;
+			signatures.text(currentNumber);
+
+			signaturesButton.addClass('highlight').delay(800).removeClass('highlight');
+		} else {
+			// Bump the number down
+			currentNumber --;
+			signatures.text(currentNumber);
+		}
+	});
+
+	// Show signatures pictures
+	$('.signatures').click(function(e) {
+		$(this).parents('.cause-frame').next('.cause-summary').find('.signature-view').toggleClass('show');
 	});
 
 });

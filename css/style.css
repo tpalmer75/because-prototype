@@ -364,6 +364,13 @@ iframe {
   border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 2px 8px 4px;
   border-radius: 12px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+.cause-frame .signatures.highlight {
+  background: rgba(255, 255, 255, 0.5);
 }
 .cause-frame .signatures h4 {
   display: inline-block;
@@ -374,8 +381,8 @@ iframe {
 }
 .cause-summary {
   display: none;
-  top: 180px;
-  z-index: 5;
+  position: relative;
+  z-index: 2;
   background: #fff;
   color: #656565;
   padding: 12px;
@@ -485,6 +492,27 @@ iframe {
 }
 .cause-summary .update .text p {
   margin-top: 4px;
+}
+.cause-summary .signature-view {
+  background: #fff;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  height: 0;
+  opacity: 0;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 12px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+.cause-summary .signature-view.show {
+  left: 0
+			overflow: scroll;
+  opacity: 1;
+  height: calc(100% - 60px);
 }
 .cause,
 .main-feed {
