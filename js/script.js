@@ -109,8 +109,6 @@ $(document).ready(function() {
 			// Bump the number up
 			currentNumber ++;
 			signatures.text(currentNumber);
-
-			signaturesButton.addClass('highlight').delay(800).removeClass('highlight');
 		} else {
 			// Bump the number down
 			currentNumber --;
@@ -121,6 +119,13 @@ $(document).ready(function() {
 	// Show signatures pictures
 	$('.signatures').click(function(e) {
 		$(this).parents('.cause-frame').next('.cause-summary').find('.signature-view').toggleClass('show');
+	});
+
+	// Filter checkboxes
+	var filterBox = $('#filter .checkbox');
+
+	filterBox.click(function() {
+		$(this).find('.icon').fadeOut(100);
 	});
 
 });

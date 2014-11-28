@@ -363,6 +363,7 @@ iframe {
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.5);
   padding: 2px 8px 4px;
+  min-width: 65px;
   border-radius: 12px;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -501,7 +502,6 @@ iframe {
   height: 0;
   opacity: 0;
   width: 100%;
-  overflow: hidden;
   padding: 0 12px;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -513,6 +513,20 @@ iframe {
 			overflow: scroll;
   opacity: 1;
   height: calc(100% - 60px);
+}
+.cause-summary .signature-view .single {
+  width: 32%;
+  display: inline-block;
+  text-align: center;
+  margin: 24px 0;
+}
+.cause-summary .signature-view .single img {
+  width: 100%;
+}
+.cause-summary .signature-view .single img.profile {
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
 }
 .cause,
 .main-feed {
@@ -529,9 +543,10 @@ iframe {
   position: absolute;
   top: 60px;
   left: -75%;
-  width: 75%;
+  width: 200px;
   height: 600px;
-  background: rgba(255, 255, 255, 0.8);
+  padding-top: 12px;
+  background: rgba(230, 230, 230, 0.9);
   -webkit-transition: left 0.3s;
   -moz-transition: left 0.3s;
   -ms-transition: left 0.3s;
@@ -539,4 +554,49 @@ iframe {
 }
 #filter.show {
   left: 0;
+}
+#filter .category {
+  padding: 16px 20px;
+}
+#filter .category h3 {
+  color: #656565;
+  display: inline-block;
+  margin-left: 12px;
+}
+#filter .category .checkbox {
+  background: #00adef;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  vertical-align: middle;
+}
+#filter .category .checkbox .icon {
+  position: relative;
+  top: 2px;
+  font-size: 12px;
+}
+#filter .category.green .checkbox {
+  background: #00bab4;
+}
+#filter .category.blue .checkbox {
+  background: #00adef;
+}
+#filter .category.dark-blue .checkbox {
+  background: #207bb1;
+}
+#filter .category.purple .checkbox {
+  background: #a183c1;
+}
+#filter .category.red .checkbox {
+  background: #f26c5e;
+}
+#filter .category.orange .checkbox {
+  background: #f49c66;
+}
+#filter .category.brown .checkbox {
+  background: #b49a83;
 }
