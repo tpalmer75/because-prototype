@@ -46,6 +46,8 @@ $(document).ready(function() {
 
 		filterContainer.removeClass('show');
 
+		topBarControls();
+
 	});
 
 	// Function to remove all top bar controls
@@ -128,10 +130,10 @@ $(document).ready(function() {
 		}
 	});
 
-	
+	// Swipe recognition with touchSwipe.js	
 	mainFrame.swipe( { swipeLeft:swipe1, swipeRight:swipe2, allowPageScroll:"vertical" });
 
-	// Swipe recognition
+	// Function for swiping left
 	function swipe1(swipe, direction, distance, duration, fingerCount) {
 			 // Find how far left the mainFrame is
 			var currentLeft = parseInt($('.mainframe')[0].style.left);
@@ -149,20 +151,11 @@ $(document).ready(function() {
 				// Apply
 				wayfinder.css('left', newWayfinderLeft + '%');
 
-
-			// For swipe right
-			} else if (direction == 'right' && currentLeft < 0) {
-				// Set the new left
-				var newLeft = currentLeft + 100;
-				// Apply
-				mainFrame.css('left', newLeft + '%');
-				// Set the new left for the wayfinder
-				var newWayfinderLeft = wayfinderLeft - 25;
-				// Apply
-				wayfinder.css('left', newWayfinderLeft + '%');
+				topBarControls();
 			}
 		};
 
+	// Function for swiping right
 	function swipe2(swipe, direction, distance, duration, fingerCount) {
 			 // Find how far left the mainFrame is
 			var currentLeft = parseInt($('.mainframe')[0].style.left);
@@ -179,7 +172,25 @@ $(document).ready(function() {
 				var newWayfinderLeft = wayfinderLeft - 25;
 				// Apply
 				wayfinder.css('left', newWayfinderLeft + '%');
+
+				topBarControls();
 			}
 		};
 
+	var topBarControls = function() {
+		var currentPosition = parseInt(mainFrame[0].style.left);
+		var topBar = $('.top-bar');
+
+		clearTopBar();
+
+		if (currentPosition == 0) {
+			$('.top-create').addClass('show');
+		} else if (currentPosition == -100) {
+			if($('.cause-summary').is(':visible')) {
+				$('.top-singleview').addClass('show');
+			} else {
+				$('.top-mainfeed').addClass('show');
+			}
+		}
+	};
 });

@@ -46,11 +46,19 @@ html(lang="en")
 							span Cause
 					.section(style="text-align: right; padding: 10px 10px 0 0;")
 						a(href="")
+				.top-controls.top-create
+					.section(style="padding: 10px 0 0 10px;")
+						a(href="#")
+					.section(style="text-align: center; padding-top: 10px;")
+						h1.tk-adelle Be
+							span Cause
+					.section(style="text-align: right; padding: 10px 10px 0 0;")
+						a(href="")
 			.bottom-bar
 				div.group
 					.section(data-left="0")
 						i.icon.icon-plus
-						h4 Submit
+						h4 Create
 					.section(data-left="25")
 						i.icon.icon-newspaper
 						h4 Feed
@@ -64,7 +72,30 @@ html(lang="en")
 					.wayfinder(style="left:25%;")
 			.mainframe.group(style="left: -100%;")
 				.col.col-1.submit
-					h1 Hello World!
+					h3.walkthrough Create a Cause
+					form
+						label Title
+						input(type="text")
+						label Description
+						textarea
+						label Category
+						select
+							option(value='' disabled selected style='display: none') Tap to select a category
+							option Art/Music
+							option Environment
+							option Health
+							option Humor
+							option Politics
+							option School
+							option Sports
+						label Duration
+						select
+							option(value='' disabled selected style='display: none') Tap to select a duration
+							option One week
+							option Two weeks
+							option One month
+							option Three months
+						button Continue
 				.main-feed.col.col-2
 					.cause-frame.cause-trigger(style="background-image: url('img/recycling.jpg');")
 						.shade.light

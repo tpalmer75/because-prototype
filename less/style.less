@@ -57,6 +57,73 @@ iframe {
 	}
 }
 
+.col-1 {
+	padding: 24px 12px;
+}
+
+.col-3 {
+	position: relative;
+}
+
+.walkthrough {
+	color: #A3A3A3;
+	font-size: 16px;
+	text-align: center;
+}
+
+form {
+	margin-top: 12px;
+	label {
+		display: block; 
+		color: @dark-grey;
+		font-size: 14px;
+		margin: 12px 0;
+	}
+	input, textarea {
+		border: 0;
+		outline: none;
+		width: 100%;
+		font-size: 16px;
+		border-radius: 4px;
+	}
+	textarea {
+		resize: none;
+		height: 96px;
+		padding: 12px;
+	}
+	input {
+		height: 36px;
+		line-height: 36px;
+		padding: 0 12px;
+	}
+	select {
+		appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		border: 0;
+		.border-radius(4px);
+		height: 36px;
+		width: 100%;
+		background: #fff;
+		font-size: 16px;
+		text-indent: 12px;
+		color: #999;
+	}
+	button {
+		background: @green;
+		border: 0;
+		outline: none;
+		color: #fff;
+		height: 36px;
+		width: 125px;
+		font-size: 16px;
+		margin: auto;
+		display: block;
+		margin-top: 36px;
+		.border-radius(4px);
+	}
+}
+
 .top-controls {
 	position: absolute;
 	top: -40px;
@@ -244,6 +311,7 @@ iframe {
 			display: inline-block;
 			font-size: 18px;
 			font-weight: 300;
+			vertical-align: middle;
 		}
 	}
 	.cause-button {
