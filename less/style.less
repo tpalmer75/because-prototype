@@ -338,10 +338,10 @@ iframe {
 		padding: 0 12px;
 		.transition(all .2s);
 		&.show {
-			left: 0
+			left: 0;
 			overflow: scroll;
 			opacity: 1;
-			height: calc(~"100% - 60px");
+			height: auto;
 		}
 		.single {
 			width: 32%;
@@ -389,6 +389,7 @@ iframe {
 			color: #656565;
 			display: inline-block;
 			margin-left: 12px;
+			vertical-align: middle;
 		}
 		.checkbox {
 			background: @blue;

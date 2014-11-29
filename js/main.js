@@ -114,20 +114,32 @@ $(document).ready(function() {
 	// Filter checkboxes
 	var filterBox = $('#filter .checkbox');
 
+	// When checkbox is clicked
 	filterBox.click(function() {
-		$(this).find('.icon').fadeOut(100);
+
+		var checkMark = $(this).find('.icon');
+		// If it's visible
+		if (checkMark.is(':visible')) {
+			// Hide it
+			checkMark.fadeOut(100);
+		} else {
+			// Show it
+			checkMark.fadeIn(100);
+		}
 	});
 
+	
+	mainFrame.swipe( { swipeLeft:swipe1, swipeRight:swipe2, allowPageScroll:"vertical" });
+
 	// Swipe recognition
-	mainFrame.swipe({
-		swipe:function(swipe, direction, distance, duration, fingerCount) {
+	function swipe1(swipe, direction, distance, duration, fingerCount) {
 			 // Find how far left the mainFrame is
 			var currentLeft = parseInt($('.mainframe')[0].style.left);
 
 			var wayfinderLeft = parseInt($('.wayfinder')[0].style.left);
 
 			// For swipe left
-			if (direction == 'left' && currentLeft < 400) {
+			if (currentLeft < 400) {
 				// Set the new left
 				var newLeft = currentLeft - 100;
 				// Apply
@@ -149,7 +161,25 @@ $(document).ready(function() {
 				// Apply
 				wayfinder.css('left', newWayfinderLeft + '%');
 			}
-		}
-	});
+		};
+
+	function swipe2(swipe, direction, distance, duration, fingerCount) {
+			 // Find how far left the mainFrame is
+			var currentLeft = parseInt($('.mainframe')[0].style.left);
+
+			var wayfinderLeft = parseInt($('.wayfinder')[0].style.left);
+
+			// For swipe right
+			if (currentLeft < 0) {
+				// Set the new left
+				var newLeft = currentLeft + 100;
+				// Apply
+				mainFrame.css('left', newLeft + '%');
+				// Set the new left for the wayfinder
+				var newWayfinderLeft = wayfinderLeft - 25;
+				// Apply
+				wayfinder.css('left', newWayfinderLeft + '%');
+			}
+		};
 
 });
