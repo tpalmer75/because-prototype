@@ -1,13 +1,7 @@
 $(document).ready(function() {
 
-	// Detect touch screens and add class to HTML
-    var is_touch_device = 'ontouchstart' in document.documentElement;
-
-    if (is_touch_device) {
-    	$('html').addClass('touch');
-    } else {
-    	$('html').addClass('no-touch');
-    }
+	var mainFrame = $('.mainframe');
+	var wayfinder = $('.wayfinder');
 
 	// Scroll detection
 	var lastScrollTop = 0;
@@ -42,13 +36,11 @@ $(document).ready(function() {
 	bottomTrigger.click(function() {
 		// Set the data value as a variable
 		var placement = $(this).data('left')+'%';
-		var wayfinder = $('.wayfinder');
 		// Slide the wayfinder
 		wayfinder.css('left', placement);
 
 		// Multiply the data value by four (mainframe is 400% wide)
 		var screenSlide ='-' + $(this).data('left') * 4 + '%';
-		var mainFrame = $('.mainframe');
 		// Slide the mainframe
 		mainFrame.css('left', screenSlide);
 
@@ -59,9 +51,7 @@ $(document).ready(function() {
 	// Function to remove all top bar controls
 	var clearTopBar = function(){$('.top-controls').removeClass('show');};
 
-	// ========================================
 	// Single cause view
-	// ========================================
 
 	var cause = $('.cause-trigger');
 
@@ -126,6 +116,40 @@ $(document).ready(function() {
 
 	filterBox.click(function() {
 		$(this).find('.icon').fadeOut(100);
+	});
+
+	// Swipe recognition
+	mainFrame.swipe({
+		swipe:function(swipe, direction, distance, duration, fingerCount) {
+			 // Find how far left the mainFrame is
+			var currentLeft = parseInt($('.mainframe')[0].style.left);
+
+			var wayfinderLeft = parseInt($('.wayfinder')[0].style.left);
+
+			// For swipe left
+			if (direction == 'left' && currentLeft < 400) {
+				// Set the new left
+				var newLeft = currentLeft - 100;
+				// Apply
+				mainFrame.css('left', newLeft + '%');
+				// Set the new left for the wayfinder
+				var newWayfinderLeft = wayfinderLeft + 25;
+				// Apply
+				wayfinder.css('left', newWayfinderLeft + '%');
+
+
+			// For swipe right
+			} else if (direction == 'right' && currentLeft < 0) {
+				// Set the new left
+				var newLeft = currentLeft + 100;
+				// Apply
+				mainFrame.css('left', newLeft + '%');
+				// Set the new left for the wayfinder
+				var newWayfinderLeft = wayfinderLeft - 25;
+				// Apply
+				wayfinder.css('left', newWayfinderLeft + '%');
+			}
+		}
 	});
 
 });
