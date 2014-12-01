@@ -19,9 +19,9 @@ html(lang="en")
 		meta(chartset="UTF 8")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		link(href="css/icons.css" rel="stylesheet")
-		//- script(src="//use.typekit.net/fov7hkp.js")
-		//- script.
-		//- 	try{Typekit.load();}catch(e){}
+		script(src="//use.typekit.net/fov7hkp.js")
+		script.
+			try{Typekit.load();}catch(e){}
 		link(type="text/css" rel="stylesheet" href="css/style.css")
 	body
 		.container
@@ -50,13 +50,21 @@ html(lang="en")
 					div(style="width: 100%; text-align: center; padding-top: 10px;")
 						h1(style="color: #00ADEF;") Create a Cause
 				.top-controls.top-create-2
-					.section(style="padding: 10px 0 0 10px;")
-						a.back-button(href="#")
-							i.icon.icon-arrow
-					.section(style="text-align: center; padding-top: 10px;")
-						h1.applogo Be
-							span Cause
-					.section(style="text-align: right; padding: 10px 10px 0 0;")
+					a(href="").back-button(style="position: absolute; top: 10px; left: 8px;")
+						i.icon.icon-arrow
+					div(style="width: 100%; text-align: center; padding-top: 10px;")
+						h1(style="color: #00ADEF;") Create a Cause
+				.top-controls.top-create-3
+					a(href="").back-button(style="position: absolute; top: 10px; left: 8px;")
+						i.icon.icon-arrow
+					div(style="width: 100%; text-align: center; padding-top: 10px;")
+						h1(style="color: #00ADEF;") Create a Cause
+				.top-controls.top-causes
+					.pill
+						.left-side
+							My Causes
+						.right-side
+							My Signatures
 			.bottom-bar
 				div.group
 					.section(data-left="0")
@@ -82,21 +90,21 @@ html(lang="en")
 						textarea
 						label Category
 						select
-							option(value='' disabled selected style='display: none') Tap to select a category
+							option(value='' disabled style='display: none') Tap to select a category
 							option Art/Music
 							option Environment
 							option Health
 							option Humor
 							option Politics
-							option School
+							option(selected) School
 							option Sports
 						label Duration
 						select
-							option(value='' disabled selected style='display: none') Tap to select a duration
+							option(value='' disabled style='display: none') Tap to select a duration
 							option One week
 							option Two weeks
 							option One month
-							option Three months
+							option(selected) Three months
 						button.step-1 Continue
 					.stepper
 						.circle.fill
@@ -105,7 +113,33 @@ html(lang="en")
 						.dash
 						.circle
 					.create-2
-						h1 Hello World
+						p.walkthrough Tap to upload an image
+						img.camera(src="img/camera-icon.png")
+						img.upload(src="img/ux-club.jpg")
+						p.walkthrough Or, if you don't have an image,
+							br
+							| click "Continue."
+						form
+							button Continue
+						.stepper
+							.circle
+							.dash
+							.circle.fill
+							.dash
+							.circle
+					.create-3
+						img.sample(src="img/sample.jpg")
+						p.walkthrough(style="margin-top: 62%;") You're all set!
+						p.walkthrough(style="margin: 45px 0 48px;") Click “Submit” and enter your Apple ID. You’ll be charged $0.99 and your cause will immediately go live.
+						form
+							a(href="element")
+								button.publish Publish
+						.stepper
+							.circle
+							.dash
+							.circle
+							.dash
+							.circle.fill
 				.main-feed.col.col-2
 					.cause-frame.cause-trigger(style="background-image: url('img/recycling.jpg');")
 						.shade.light
@@ -328,6 +362,8 @@ html(lang="en")
 								span.number 7
 							.text
 								p Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum.
+				.col.col-3.causes
+
 			#filter
 				.category.green
 					.checkbox

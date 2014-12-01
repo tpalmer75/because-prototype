@@ -19,6 +19,8 @@
     <meta chartset="UTF 8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/icons.css" rel="stylesheet">
+    <script src="//use.typekit.net/fov7hkp.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
     <link type="text/css" rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -44,12 +46,25 @@
             <h1 style="color: #00ADEF;">Create a Cause</h1>
           </div>
         </div>
-        <div class="top-controls top-create-2">
-          <div style="padding: 10px 0 0 10px;" class="section"><a href="#" class="back-button"><i class="icon icon-arrow"></i></a></div>
-          <div style="text-align: center; padding-top: 10px;" class="section">
-            <h1 class="applogo">Be<span>Cause</span></h1>
+        <div class="top-controls top-create-2"><a href="" style="position: absolute; top: 10px; left: 8px;" class="back-button"><i class="icon icon-arrow"></i></a>
+          <div style="width: 100%; text-align: center; padding-top: 10px;">
+            <h1 style="color: #00ADEF;">Create a Cause</h1>
           </div>
-          <div style="text-align: right; padding: 10px 10px 0 0;" class="section"></div>
+        </div>
+        <div class="top-controls top-create-3"><a href="" style="position: absolute; top: 10px; left: 8px;" class="back-button"><i class="icon icon-arrow"></i></a>
+          <div style="width: 100%; text-align: center; padding-top: 10px;">
+            <h1 style="color: #00ADEF;">Create a Cause</h1>
+          </div>
+        </div>
+        <div class="top-controls top-causes">
+          <div class="pill">
+            <div class="left-side">
+              <My>Causes</My>
+            </div>
+            <div class="right-side">
+              <My>Signatures</My>
+            </div>
+          </div>
         </div>
       </div>
       <div class="bottom-bar">
@@ -80,22 +95,22 @@
             <textarea></textarea>
             <label>Category</label>
             <select>
-              <option value="" disabled selected style="display: none">Tap to select a category</option>
+              <option value="" disabled style="display: none">Tap to select a category</option>
               <option>Art/Music</option>
               <option>Environment</option>
               <option>Health</option>
               <option>Humor</option>
               <option>Politics</option>
-              <option>School</option>
+              <option selected>School</option>
               <option>Sports</option>
             </select>
             <label>Duration</label>
             <select>
-              <option value="" disabled selected style="display: none">Tap to select a duration</option>
+              <option value="" disabled style="display: none">Tap to select a duration</option>
               <option>One week</option>
               <option>Two weeks</option>
               <option>One month</option>
-              <option>Three months</option>
+              <option selected>Three months</option>
             </select>
             <button class="step-1">Continue</button>
           </form>
@@ -107,7 +122,31 @@
             <div class="circle"></div>
           </div>
           <div class="create-2">
-            <h1>Hello World</h1>
+            <p class="walkthrough">Tap to upload an image</p><img src="img/camera-icon.png" class="camera"><img src="img/ux-club.jpg" class="upload">
+            <p class="walkthrough">Or, if you don't have an image,<br>click "Continue."</p>
+            <form>
+              <button>Continue</button>
+            </form>
+            <div class="stepper">
+              <div class="circle"></div>
+              <div class="dash"></div>
+              <div class="circle fill"></div>
+              <div class="dash"></div>
+              <div class="circle"></div>
+            </div>
+          </div>
+          <div class="create-3"><img src="img/sample.jpg" class="sample">
+            <p style="margin-top: 62%;" class="walkthrough">You're all set!</p>
+            <p style="margin: 45px 0 48px;" class="walkthrough">Click “Submit” and enter your Apple ID. You’ll be charged $0.99 and your cause will immediately go live.</p>
+            <form><a href="element">
+                <button class="publish">Publish</button></a></form>
+            <div class="stepper">
+              <div class="circle"></div>
+              <div class="dash"></div>
+              <div class="circle"></div>
+              <div class="dash"></div>
+              <div class="circle fill"></div>
+            </div>
           </div>
         </div>
         <div class="main-feed col col-2">
@@ -317,6 +356,7 @@
             </div>
           </div>
         </div>
+        <div class="col col-3 causes"></div>
       </div>
       <div id="filter">
         <div class="category green">

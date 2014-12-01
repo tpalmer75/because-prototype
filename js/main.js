@@ -198,12 +198,70 @@ $(document).ready(function() {
 	};
 
 	// Create cause slides
-	$('.col-1 form button.step-1').click(function(e) {
+	$('.col-1 form button.step-1, .top-create-2 .back-button').click(function(e) {
+
+		var oldBar = $('.top-controls.top-create');
+		var newBar = $('.top-controls.top-create-2')
+		var nextScreen = $('.create-2');
+		// Keep the button from actually firing
 		e.preventDefault();
-		$('.create-2').css('left','0');
+		// Slide the screen in
+
+		if (nextScreen.is(':hidden')) {
+			nextScreen.fadeIn(300);
+		} else {
+			nextScreen.fadeOut(300);
+		}
+
+
+		if (oldBar.hasClass('show')) {
+			oldBar.removeClass('show');
+			newBar.addClass('show');
+		} else {
+			oldBar.addClass('show');
+			newBar.removeClass('show');
+		}
+	});
+
+
+	// Fade in the ux image when the camera icon is clicked
+	$('.create-2 .camera').click(function() {
+		$('.create-2 .upload').fadeIn(200);
+	})
+
+	$('.create-2 button, .top-create-3 .back-button').click(function(e) {
+		var oldBar = $('.top-controls.top-create-2');
+		var newBar = $('.top-controls.top-create-3')
+		var nextScreen = $('.create-3');
+		// Keep the button from actually firing
+		e.preventDefault();
+		// Slide the screen in
+		if (nextScreen.is(':hidden')) {
+			nextScreen.fadeIn(300);
+		} else {
+			nextScreen.fadeOut(300);
+		}
+
+
+		if (oldBar.hasClass('show')) {
+			oldBar.removeClass('show');
+			newBar.addClass('show');
+		} else {
+			oldBar.addClass('show');
+			newBar.removeClass('show');
+		}
+	});
+
+	$('.publish').click(function(e) {
+		e.preventDefault();
 
 		clearTopBar();
 
-		$('.top-controls.top-create-2').addClass('show');
+		mainFrame.css('left','-200%');
+		wayfinder.css('left','50%');
+
+		$('.create-2, .create-3').fadeOut(300);
 	});
+
+
 });
