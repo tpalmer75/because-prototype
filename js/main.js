@@ -46,7 +46,7 @@ $(document).ready(function() {
 
 		filterContainer.removeClass('show');
 
-		topBarControls();
+		columnControl();
 
 	});
 
@@ -151,7 +151,7 @@ $(document).ready(function() {
 				// Apply
 				wayfinder.css('left', newWayfinderLeft + '%');
 
-				topBarControls();
+				columnControl();
 			}
 		};
 
@@ -173,13 +173,14 @@ $(document).ready(function() {
 				// Apply
 				wayfinder.css('left', newWayfinderLeft + '%');
 
-				topBarControls();
+				columnControl();
 			}
 		};
 
-	var topBarControls = function() {
+	var columnControl = function() {
 		var currentPosition = parseInt(mainFrame[0].style.left);
 		var topBar = $('.top-bar');
+		var container = $('.container');
 
 		clearTopBar();
 
@@ -191,6 +192,18 @@ $(document).ready(function() {
 			} else {
 				$('.top-mainfeed').addClass('show');
 			}
+		} else {
+			
 		}
 	};
+
+	// Create cause slides
+	$('.col-1 form button.step-1').click(function(e) {
+		e.preventDefault();
+		$('.create-2').css('left','0');
+
+		clearTopBar();
+
+		$('.top-controls.top-create-2').addClass('show');
+	});
 });

@@ -34,11 +34,6 @@ iframe {
 
 // Standard CSS ------
 
-h1.applogo {
-	font-family: @serif;
-	font-weight: normal;
-}
-
 .container {
 	background: #eee;
 	margin: auto;
@@ -63,7 +58,8 @@ h1.applogo {
 }
 
 .col-1 {
-	padding: 24px 12px;
+	padding: 2px 12px 24px;
+	position: relative;
 }
 
 .col-3 {
@@ -89,16 +85,18 @@ h1.applogo {
 	top: 0;
 	max-width: 400px;
 	color: @dark-grey;
-	.box-shadow(0 5px 10px rgba(0,0,0,.1));
+	.box-shadow(0 1px 5px rgba(0, 0, 0, 0.1));
 	z-index: 10;
 	h1 {
 		color: @blue;
-		text-align: center;
-		display: inline-block;
-		margin: auto;
 		span {
 			color: @green;
 		}
+	}
+	h1.applogo {
+		font-family: @serif;
+		font-weight: normal;
+		text-align: center;
 	}
 	img {
 		width: 100%;
@@ -116,7 +114,7 @@ h1.applogo {
 	max-width: 400px;
 	position: fixed;
 	bottom: 0;
-	.box-shadow(0 -5px 10px rgba(0,0,0,.1));
+	.box-shadow(0 1px 5px rgba(0, 0, 0, 0.1));
 	.transition(bottom .5s);
 	z-index: 5;
 	&.hide {
@@ -469,7 +467,6 @@ h1.applogo {
 }
 
 form {
-	margin-top: 12px;
 	label {
 		display: block; 
 		color: @dark-grey;
@@ -516,7 +513,7 @@ form {
 		font-size: 16px;
 		margin: auto;
 		display: block;
-		margin-top: 36px;
+		margin-top: 24px;
 		.border-radius(4px);
 	}
 }
@@ -545,4 +542,15 @@ form {
 			vertical-align: middle;
 			margin: 0 -5px;
 		}
+}
+
+.create-2 {
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+	background: #eee;
+	text-align: center;
+	.transition(left .2s);
 }

@@ -19,9 +19,9 @@ html(lang="en")
 		meta(chartset="UTF 8")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		link(href="css/icons.css" rel="stylesheet")
-		script(src="//use.typekit.net/fov7hkp.js")
-		script.
-			try{Typekit.load();}catch(e){}
+		//- script(src="//use.typekit.net/fov7hkp.js")
+		//- script.
+		//- 	try{Typekit.load();}catch(e){}
 		link(type="text/css" rel="stylesheet" href="css/style.css")
 	body
 		.container
@@ -47,13 +47,16 @@ html(lang="en")
 					.section(style="text-align: right; padding: 10px 10px 0 0;")
 						a(href="")
 				.top-controls.top-create
+					div(style="width: 100%; text-align: center; padding-top: 10px;")
+						h1(style="color: #00ADEF;") Create a Cause
+				.top-controls.top-create-2
 					.section(style="padding: 10px 0 0 10px;")
-						a(href="#")
+						a.back-button(href="#")
+							i.icon.icon-arrow
 					.section(style="text-align: center; padding-top: 10px;")
 						h1.applogo Be
 							span Cause
 					.section(style="text-align: right; padding: 10px 10px 0 0;")
-						a(href="")
 			.bottom-bar
 				div.group
 					.section(data-left="0")
@@ -72,7 +75,6 @@ html(lang="en")
 					.wayfinder(style="left:25%;")
 			.mainframe.group(style="left: -100%;")
 				.col.col-1.submit
-					h3.walkthrough Create a Cause
 					form
 						label Title
 						input(type="text")
@@ -95,13 +97,15 @@ html(lang="en")
 							option Two weeks
 							option One month
 							option Three months
-						button Continue
+						button.step-1 Continue
 					.stepper
 						.circle.fill
 						.dash
 						.circle
 						.dash
 						.circle
+					.create-2
+						h1 Hello World
 				.main-feed.col.col-2
 					.cause-frame.cause-trigger(style="background-image: url('img/recycling.jpg');")
 						.shade.light
