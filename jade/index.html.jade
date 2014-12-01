@@ -60,11 +60,12 @@ html(lang="en")
 					div(style="width: 100%; text-align: center; padding-top: 10px;")
 						h1(style="color: #00ADEF;") Create a Cause
 				.top-controls.top-causes
-					.pill
+					.pill.group
 						.left-side
-							My Causes
-						.right-side
-							My Signatures
+							h4 My Causes
+						.right-side.active
+							h4 My Signatures
+						.bar
 			.bottom-bar
 				div.group
 					.section(data-left="0")
@@ -363,7 +364,19 @@ html(lang="en")
 							.text
 								p Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum.
 				.col.col-3.causes
-
+					.my-signatures
+						.cause-frame.small(style="background-image: url('img/recycling.jpg');")
+							.shade.light
+							.shade.dark
+							.content.blue
+								h2 Support more recycling options for Provo residents
+								.signatures
+									h4 6 Updates
+						.cause-frame.small
+							.shade.light
+							.shade.dark
+							.content.dark-blue
+								h2 Healthier options in the vending machines
 			#filter
 				.category.green
 					.checkbox

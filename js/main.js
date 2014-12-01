@@ -192,8 +192,8 @@ $(document).ready(function() {
 			} else {
 				$('.top-mainfeed').addClass('show');
 			}
-		} else {
-			
+		} else if (currentPosition == -200){
+			$('.top-causes').addClass('show');
 		}
 	};
 
@@ -233,7 +233,7 @@ $(document).ready(function() {
 		var oldBar = $('.top-controls.top-create-2');
 		var newBar = $('.top-controls.top-create-3')
 		var nextScreen = $('.create-3');
-		// Keep the button from actually firing
+		// Keep the button from firing
 		e.preventDefault();
 		// Slide the screen in
 		if (nextScreen.is(':hidden')) {
@@ -255,10 +255,10 @@ $(document).ready(function() {
 	$('.publish').click(function(e) {
 		e.preventDefault();
 
-		clearTopBar();
-
 		mainFrame.css('left','-200%');
 		wayfinder.css('left','50%');
+
+		columnControl();
 
 		$('.create-2, .create-3').fadeOut(300);
 	});
