@@ -19,9 +19,9 @@ html(lang="en")
 		meta(chartset="UTF 8")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		link(href="css/icons.css" rel="stylesheet")
-		//- script(src="//use.typekit.net/fov7hkp.js")
-		//- script.
-		//- 	try{Typekit.load();}catch(e){}
+		script(src="//use.typekit.net/fov7hkp.js")
+		script.
+			try{Typekit.load();}catch(e){}
 		link(type="text/css" rel="stylesheet" href="css/style.css")
 	body
 		.container
@@ -32,7 +32,7 @@ html(lang="en")
 						a.filter-button(href="#")
 							p Filter
 					.section(style="text-align: center; padding-top: 10px;")
-						h1.tk-adelle Be
+						h1.applogo Be
 							span Cause
 					.section(style="text-align: right; padding: 10px 10px 0 0;")
 						a(href="")
@@ -42,7 +42,7 @@ html(lang="en")
 						a.back-button(href="#")
 							i.icon.icon-arrow
 					.section(style="text-align: center; padding-top: 10px;")
-						h1.tk-adelle Be
+						h1.applogo Be
 							span Cause
 					.section(style="text-align: right; padding: 10px 10px 0 0;")
 						a(href="")
@@ -50,7 +50,7 @@ html(lang="en")
 					.section(style="padding: 10px 0 0 10px;")
 						a(href="#")
 					.section(style="text-align: center; padding-top: 10px;")
-						h1.tk-adelle Be
+						h1.applogo Be
 							span Cause
 					.section(style="text-align: right; padding: 10px 10px 0 0;")
 						a(href="")
@@ -96,6 +96,12 @@ html(lang="en")
 							option One month
 							option Three months
 						button Continue
+					.stepper
+						.circle.fill
+						.dash
+						.circle
+						.dash
+						.circle
 				.main-feed.col.col-2
 					.cause-frame.cause-trigger(style="background-image: url('img/recycling.jpg');")
 						.shade.light

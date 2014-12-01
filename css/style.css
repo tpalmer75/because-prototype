@@ -173,6 +173,10 @@ iframe {
   margin: auto;
   border-radius: 4px;
 }
+h1.applogo {
+  font-family: "Adelle", serif;
+  font-weight: normal;
+}
 .container {
   background: #eee;
   margin: auto;
@@ -202,74 +206,6 @@ iframe {
 }
 .col-3 {
   position: relative;
-}
-.walkthrough {
-  color: #A3A3A3;
-  font-size: 16px;
-  text-align: center;
-}
-form {
-  margin-top: 12px;
-}
-form label {
-  display: block;
-  color: #656565;
-  font-size: 14px;
-  margin: 12px 0;
-}
-form input,
-form textarea {
-  border: 0;
-  outline: none;
-  width: 100%;
-  font-size: 16px;
-  border-radius: 4px;
-}
-form textarea {
-  resize: none;
-  height: 96px;
-  padding: 12px;
-}
-form input {
-  height: 36px;
-  line-height: 36px;
-  padding: 0 12px;
-}
-form select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border: 0;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  height: 36px;
-  width: 100%;
-  background: #fff;
-  font-size: 16px;
-  text-indent: 12px;
-  color: #999;
-}
-form button {
-  background: #00bab4;
-  border: 0;
-  outline: none;
-  color: #fff;
-  height: 36px;
-  width: 125px;
-  font-size: 16px;
-  margin: auto;
-  display: block;
-  margin-top: 36px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
 }
 .top-controls {
   position: absolute;
@@ -388,6 +324,7 @@ form button {
 .cause-frame h2 {
   color: #fff;
   font-family: "Adelle", serif;
+  font-weight: normal;
   font-size: 24px;
   line-height: 30px;
 }
@@ -675,4 +612,96 @@ form button {
 }
 #filter .category.brown .checkbox {
   background: #b49a83;
+}
+.walkthrough {
+  color: #A3A3A3;
+  font-size: 16px;
+  text-align: center;
+}
+form {
+  margin-top: 12px;
+}
+form label {
+  display: block;
+  color: #656565;
+  font-size: 14px;
+  margin: 12px 0;
+}
+form input,
+form textarea {
+  border: 0;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 4px;
+}
+form textarea {
+  resize: none;
+  height: 96px;
+  padding: 12px;
+}
+form input {
+  height: 36px;
+  line-height: 36px;
+  padding: 0 12px;
+}
+form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  height: 36px;
+  width: 100%;
+  background: #fff;
+  font-size: 16px;
+  text-indent: 12px;
+  color: #999;
+}
+form button {
+  background: #00bab4;
+  border: 0;
+  outline: none;
+  color: #fff;
+  height: 36px;
+  width: 125px;
+  font-size: 16px;
+  margin: auto;
+  display: block;
+  margin-top: 36px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.stepper {
+  margin-top: 12px;
+  text-align: center;
+}
+.stepper .circle {
+  width: 11px;
+  height: 11px;
+  border-radius: 9999px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  vertical-align: middle;
+}
+.stepper .circle.fill {
+  border: 1px solid #00bab4;
+  background: #00bab4;
+}
+.stepper .dash {
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  background: #ccc;
+  vertical-align: middle;
+  margin: 0 -5px;
 }
