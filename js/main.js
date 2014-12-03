@@ -252,6 +252,29 @@ $(document).ready(function() {
 		}
 	});
 
+
+
+	// Signatures/Causes Pill
+
+	var pillLeft = $('.pill .left-side');
+	var pillRight = $('.pill .right-side');
+	var mySignatures = $('.my-signatures');
+	var myCauses = $('.my-causes');
+
+	pillLeft.click(function() {
+		mySignatures.fadeOut(200);
+		myCauses.fadeIn(200);
+		pillRight.removeClass('active');
+		$(this).addClass('active');
+	});
+
+	pillRight.click(function() {
+		mySignatures.fadeIn(200);
+		myCauses.fadeOut(200);
+		pillLeft.removeClass('active');
+		$(this).addClass('active');
+	});
+
 	$('.publish').click(function(e) {
 		e.preventDefault();
 
@@ -260,8 +283,14 @@ $(document).ready(function() {
 
 		columnControl();
 
-		$('.create-2, .create-3').fadeOut(300);
-	});
+		mySignatures.fadeOut(200);
+		myCauses.fadeIn(200);
+		pillRight.removeClass('active');
+		pillLeft.addClass('active');
 
+		$('.create-2, .create-3').fadeOut(300);
+		
+		$('.my-causes .cause-frame').delay(300).slideDown(200);
+	});
 
 });

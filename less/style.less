@@ -66,11 +66,15 @@ iframe {
 .col-3 {
 	position: relative;
 	background: #777;
-	.my-signatures {
+	.my-signatures, .my-causes {
 		position: absolute;
 		left: 0;
 		top: 0;
 		width: 100%;
+		min-height:568px;
+	}
+	.my-causes {
+		display: none;
 	}
 }
 
@@ -200,11 +204,18 @@ iframe {
 		&.purple {
 			border-left: 5px solid @purple;
 		}
+		&.red {
+			border-left: 5px solid @red;
+		}
 		&.orange {
 			border-left: 5px solid @orange;
 		}
 		&.dark-blue {
-			border-left: 5px solid @dark-blue;		}
+			border-left: 5px solid @dark-blue;		
+		}
+		&.brown {
+			border-left: 5px solid @brown;
+		}
 	}
 	.time {
 		color: rgba(221,221,221,.75);
@@ -245,14 +256,35 @@ iframe {
 		}
 	}
 	&.small {
-		height: 100px;
+		height: 96px;
 		h2 {
 			font-size: 16px;
 			text-shadow: 0 1px 2px rgba(0,0,0,.5);
 			line-height: 20px;
+			width: 70%;
 		}
 		.content {
 			padding: 16px;
+		}
+		.signatures {
+			font-size: 13px;
+			right: 12px;
+			bottom: auto;
+			top: 24px;
+			width: 84px;
+		 	height: 22px;
+		 	line-height:15px;
+		 	h4 {
+		 		text-align: center;
+		 	}
+		}
+		.time {
+			width: 86px;
+			left: auto;
+			right: 12px;
+			text-align: center;
+			text-transform: none;
+			bottom: 25px;
 		}
 	}
 }
