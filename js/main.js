@@ -58,6 +58,7 @@ $(document).ready(function() {
 	var cause = $('.cause-trigger');
 
 	cause.click(function() {
+		var tempScrollTop = $(window).scrollTop();
 		if ($(this).next('.cause-summary').is(':hidden')) {
 			// Hide all other causes
 			$(this).siblings().not(this).slideUp(200);
@@ -242,7 +243,6 @@ $(document).ready(function() {
 			nextScreen.fadeOut(300);
 		}
 
-
 		if (oldBar.hasClass('show')) {
 			oldBar.removeClass('show');
 			newBar.addClass('show');
@@ -291,6 +291,17 @@ $(document).ready(function() {
 		$('.create-2, .create-3').fadeOut(300);
 		
 		$('.my-causes .cause-frame').delay(300).slideDown(200);
+		$('.my-causes p').hide();
 	});
 
+	// Keyboard Activation
+
+	var keyboard = $('.keyboard');
+	var inputs = $('input, textarea');
+	inputs.focus(function() {
+		keyboard.addClass('show');
+	});
+	inputs.focusout(function() {
+		keyboard.removeClass('show');
+	});
 });

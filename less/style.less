@@ -7,7 +7,9 @@
 body {
 	font-family: 'Helvetica Neue', Helvetica, sans-serif;
 }
-
+::-webkit-scrollbar { 
+    display: none; 
+}
 a {
 	text-decoration: none;
 	color: inherit;
@@ -356,7 +358,7 @@ iframe {
 		}
 		&.signed {
 			border: 1px solid @red;
-			background: transparent;
+			background: #fff;
 			.signed-text {
 				opacity: 1;
 			}
@@ -403,7 +405,7 @@ iframe {
 		height: 0;
 		opacity: 0;
 		width: 100%;
-		padding: 0 12px;
+		padding: 0 12px 64px 0;
 		.transition(all .2s);
 		&.show {
 			left: 0;
@@ -415,13 +417,18 @@ iframe {
 			width: 32%;
 			display: inline-block;
 			text-align: center;
-			margin: 24px 0;
+			margin: 12px 0;
+			font-size: 12px;
 			img {
 				width: 100%;
 				&.profile {
 					width: 36px;
 					height: 36px;
 					border-radius: 9999px;
+				}
+				&.signature {
+					max-height: 24px;
+					width: 70%;
 				}
 			}
 		}
@@ -555,6 +562,7 @@ form {
 		font-size: 16px;
 		text-indent: 2px;
 		color: #999;
+		appearance: none;
 	}
 	button {
 		background: @green;
@@ -656,5 +664,20 @@ form {
 				color: #fff;
 			}
 		}
+	}
+}
+
+// Keyboard --------------
+
+.keyboard {
+	position: fixed;
+	z-index: 11;
+	bottom: -218px;
+	.transition(bottom .5s);
+	&.show {
+		bottom: -3px;
+	}
+	img {
+		width: 100%;
 	}
 }

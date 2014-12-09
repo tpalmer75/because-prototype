@@ -154,6 +154,9 @@ table {
 body {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -522,7 +525,7 @@ iframe {
 }
 .cause-summary .cause-button.signed {
   border: 1px solid #f26c5e;
-  background: transparent;
+  background: #fff;
 }
 .cause-summary .cause-button.signed .signed-text {
   opacity: 1;
@@ -568,7 +571,7 @@ iframe {
   height: 0;
   opacity: 0;
   width: 100%;
-  padding: 0 12px;
+  padding: 0 12px 64px 0;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -ms-transition: all 0.2s;
@@ -584,7 +587,8 @@ iframe {
   width: 32%;
   display: inline-block;
   text-align: center;
-  margin: 24px 0;
+  margin: 12px 0;
+  font-size: 12px;
 }
 .cause-summary .signature-view .single img {
   width: 100%;
@@ -593,6 +597,10 @@ iframe {
   width: 36px;
   height: 36px;
   border-radius: 9999px;
+}
+.cause-summary .signature-view .single img.signature {
+  max-height: 24px;
+  width: 70%;
 }
 .cause,
 .main-feed {
@@ -711,6 +719,7 @@ form select {
   font-size: 16px;
   text-indent: 2px;
   color: #999;
+  appearance: none;
 }
 form button {
   background: #00bab4;
@@ -818,4 +827,19 @@ form button {
 .top-causes .pill .right-side.active {
   background: #00adef;
   color: #fff;
+}
+.keyboard {
+  position: fixed;
+  z-index: 11;
+  bottom: -218px;
+  -webkit-transition: bottom 0.5s;
+  -moz-transition: bottom 0.5s;
+  -ms-transition: bottom 0.5s;
+  -o-transition: bottom 0.5s;
+}
+.keyboard.show {
+  bottom: -3px;
+}
+.keyboard img {
+  width: 100%;
 }
