@@ -48,7 +48,7 @@ iframe {
 }
 
 .mainframe {
-	background: #eee;
+	background: #454545;
 	width: 400%;
 	position: relative;
 	left: -100%;
@@ -113,7 +113,9 @@ iframe {
 		text-align: center;
 	}
 	img {
-		width: 100%;
+		width: 96%;
+		display: block;
+		margin: 4px auto;
 	}
 	.section {
 		width: 33%;
@@ -542,6 +544,9 @@ form {
 		width: 100%;
 		font-size: 16px;
 		border-radius: 4px;
+		&:focus {
+			border: 1px solid fade(@blue, 50%);
+		}
 	}
 	textarea {
 		resize: none;

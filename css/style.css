@@ -187,7 +187,7 @@ iframe {
   overflow-y: scroll;
 }
 .mainframe {
-  background: #eee;
+  background: #454545;
   width: 400%;
   position: relative;
   left: -100%;
@@ -262,7 +262,9 @@ iframe {
   text-align: center;
 }
 .top-bar img {
-  width: 100%;
+  width: 96%;
+  display: block;
+  margin: 4px auto;
 }
 .top-bar .section {
   width: 33%;
@@ -694,6 +696,10 @@ form textarea {
   width: 100%;
   font-size: 16px;
   border-radius: 4px;
+}
+form input:focus,
+form textarea:focus {
+  border: 1px solid rgba(0, 173, 239, 0.5);
 }
 form textarea {
   resize: none;

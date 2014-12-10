@@ -85,7 +85,12 @@ $(document).ready(function() {
 		// Put the main feed controls back
 		$('.top-controls.top-mainfeed').addClass('show');
 
-		$('.cause-frame').slideDown(200);
+		if($('.filter-frame').is(':hidden')){
+			$('.cause-frame').not('.small, .filtered').slideDown(200);
+		} else {
+			$('.cause-frame').not('.small').slideDown(200);
+		}
+		
 	});
 
 	// Changed sign button colors on click, and +1
@@ -129,6 +134,20 @@ $(document).ready(function() {
 			// Show it
 			checkMark.fadeIn(100);
 		}
+
+		var color = $(this).data('color');
+		var causeColor = $('.cause-frame.' + color);
+
+		console.log('click');
+
+		if (causeColor.is(':visible')) {
+			causeColor.slideUp(200).addClass('filtered');
+			console.log('visible');
+		} else {
+			causeColor.slideDown(200).removeClass('filtered');
+			console.log('hidden');
+		}
+
 	});
 
 	// Swipe recognition with touchSwipe.js	
